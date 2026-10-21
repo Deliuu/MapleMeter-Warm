@@ -1,171 +1,74 @@
-# MapleMeter Warm · 暖光版
+# MapleMeter Warm · Classic World 经验统计
 
-**看清每小时经验效率，记录每一次练级。**
+**专为 MapleStory Classic World 英文经典客户端制作的练级小工具。**
 
-面向 MapleStory Classic World 英文经典客户端的 Windows 经验统计工具。通过屏幕 OCR 识别等级、经验和地图，展示实时效率、升级预估、分钟趋势与历史统计。
+这一小时能打多少经验？还要多久升级？打开软件，就能看到经验效率、升级预估和练级记录。
 
-[下载最新版本](https://github.com/Deliuu/MapleMeter-Warm/releases/latest) · [使用说明](#快速开始) · [常见问题](#常见问题)
+**[下载最新版](https://github.com/Deliuu/MapleMeter-Warm/releases/latest)** · Windows x64
 
-> 当前仓库为私有，仅获得访问权限的 GitHub 账号可以查看仓库和下载 Release。
+> 目前仓库为私有，需要获得访问权限才能下载。其他服或其他客户端暂未保证兼容。
 
-## 界面预览
+## 看看界面
 
-以下截图由实际程序渲染，使用内置演示数据；不是游戏截图，也不包含真实用户记录。
+以下都是软件实际运行的界面，使用演示数据，不是个人游戏记录。
 
-### 主界面
+![主界面](docs/images/main.png)
 
-![暖光版主界面：每小时经验预估、升级时间和每分钟经验趋势](docs/images/main.png)
+练级时也可以切换成置顶小窗：
 
-### 悬浮窗
+![悬浮窗](docs/images/compact.png)
 
-![置顶悬浮窗：每小时经验、地图与有效时长](docs/images/compact.png)
+## 能做什么
+
+- **看效率**：预计每小时经验、本次净经验、平均效率、每分钟经验变化。
+- **看升级时间**：内置 Classic World 升至 100 级的经验表，估算还要多久升级。
+- **留记录**：查看历史与最近 7 / 30 天统计，也能导出 CSV。
+- **自动暂停**：15 秒没有游戏前台键鼠操作时暂停，识别到经验变化后恢复；也可以手动控制。
+- **换外观**：内置 **3 套皮肤**——静夜薄荷、枫糖暖光、晴空轻白；**2 套中文字体**——思源黑体、霞鹜文楷。英文和数字使用 Inter，界面大小也能调整。
 
 <details>
-<summary>查看设置界面</summary>
+<summary>展开查看皮肤、字体与缩放设置</summary>
 
-![皮肤、字体、缩放与识别设置](docs/images/settings.png)
+![外观设置](docs/images/settings.png)
 
 </details>
 
-## 功能特点
+## 怎么用
 
-- **经验效率**：按最近最多 5 分钟有效记录，估算每小时净经验，同时显示本次累计净经验、平均效率和有效时长。
-- **升级预估**：结合当前经验、等级需求和近期效率，估算距离下一级的时间；内置 Lv.1–99 升至下一级的经验表，并支持导入自定义表。
-- **分钟趋势**：按分钟查看净经验变化，区分经验损失和识别缺失区间，滚轮可查看更早记录。
-- **历史与每日统计**：历史记录支持搜索、筛选、排序、明细和 CSV 导出；每日统计支持最近 7 / 30 天。
-- **自动暂停与恢复**：游戏前台 15 秒无键鼠操作自动暂停；识别到可靠经验变化后恢复。手动暂停优先，连续暂停 15 分钟后结束并保存。
-- **置顶悬浮窗**：用小窗口查看效率、地图和时长，支持拖动与快捷键返回。
-- **外观定制**：静夜薄荷、枫糖暖光、晴空轻白三种皮肤；两种中文字体及 80%–150% 缩放。
-- **本地处理**：通过屏幕识别运行，不读取游戏内存、不注入、不发送游戏操作；应用业务代码没有联网、遥测或截图上传功能。
+1. 在 [Releases](https://github.com/Deliuu/MapleMeter-Warm/releases/latest) 下载 **`MapleMeter-Warm-Windows-x64.zip`**，不要选 `Source code`。
+2. **完整解压**，双击 `MapleMeter-Warm.exe`。不要只拿走 EXE，其他文件也要保留。
+3. 打开 Classic World，展开左上角小地图，保持底部经验栏可见，软件会自动开始记录。
+4. 识别不到时，进入 **设置 → 选择窗口 / 重新定位 / 识别区域**。
 
-## 快速开始
-
-### 运行环境
-
-- Windows x64，需可用的 .NET Framework 4.x / WPF；建议 Windows 10 或 Windows 11。
-- 游戏的经验、等级状态栏与左上角展开的小地图需要可见。
-- 完整运行包已包含 OCR 运行库、英文模型、模板和字体，无需另装 Python 或 Tesseract。
-
-### 下载与运行
-
-1. 在 [Releases](https://github.com/Deliuu/MapleMeter-Warm/releases/latest) 下载 **`MapleMeter-Warm-Windows-x64.zip`**。GitHub 自动提供的 `Source code` 是源码，不是完整运行包。
-2. 完整解压 ZIP，双击 `MapleMeter-Warm.exe`。不要在压缩包内运行，也不要只复制 EXE。
-3. 打开游戏，展开小地图，保持底部状态栏可见。检测到游戏后自动定位并开始记录。
-4. 有多个游戏窗口时，进入 **设置 → 选择窗口**。识别不到时，可使用 **重新定位** 或 **识别区域** 手动框选。
-5. 点击 **结束记录** 或正常退出程序以保存数据。
-
-解压后的目录应包含：
-
-```text
-MapleMeter-Warm/
-├── MapleMeter-Warm.exe
-├── runtime/                 # OCR 运行库与英文模型
-├── templates/               # 数字和 HUD 识别模板
-├── fonts/                   # 界面字体及许可证
-├── THIRD-PARTY/             # 第三方说明与许可证
-├── banner.png
-├── icon.png
-├── icon.ico
-├── experience-table-source.txt
-├── README.txt
-└── THIRD-PARTY.txt
-```
-
-### 快捷键
+运行需要 Windows x64 和 .NET Framework 4.x / WPF，建议 Windows 10 或 11。不用另装 Python 或 OCR 软件。
 
 | 快捷键 | 功能 |
 | --- | --- |
-| `Ctrl + Alt + 空格` | 手动暂停 / 继续 |
+| `Ctrl + Alt + 空格` | 暂停 / 继续 |
 | `Ctrl + Alt + L` | 返回主窗口 |
 
-## 统计口径
+## 几点说明
 
-| 指标 | 含义 |
-| --- | --- |
-| 预计每小时经验 | 最近最多 5 分钟有效记录的净经验增量 ÷ 对应秒数 × 3600；不足 5 分钟时使用已有数据 |
-| 净经验 | 本次记录累计经验增量，扣除已识别的经验损失 |
-| 平均效率 | 本次累计净经验 ÷ 全部有效秒数 × 3600，单位为 EXP / 小时 |
-| 有效时长 | 记录期间扣除暂停后的计时时长；识别缺失区间可能仍计时 |
-| 下一级预计 | 根据剩余升级经验和近期效率估算，不是固定承诺 |
+- **预计每小时经验**按最近最多 5 分钟的有效记录估算，不是未来一定能获得的经验。死亡掉经验会扣除，暂停和奖励经验也会影响结果。
+- **历史记录**只保留有效时长超过 10 分钟的记录；短记录可计入每日统计。请正常结束记录或退出，连续暂停 15 分钟也会自动结束并保存。
+- 游戏最小化、经验栏被挡住或客户端布局变化时，识别可能中断。
+- 记录和设置存在 **`%LOCALAPPDATA%\MapleMeter-Warm`**，也可从 **设置 → 打开记录目录** 找到。换电脑时复制这个文件夹即可迁移记录。
+- 软件在本地识别屏幕，不读取游戏内存、不自动操作游戏，正常使用不保存或上传游戏截图。分享日志前请检查其中的本机路径。
 
-**保存规则：**历史明细仅保留有效时长严格超过 10 分钟的记录；具有有效读数的短记录也可计入每日统计。正常结束或退出时保存，强制结束进程可能丢失尚未保存的记录。
+普通使用不需要编译。想修改源码，可以看 [开发说明](docs/BUILD.md)。
 
-## 数据与隐私
+## 致谢
 
-设置与记录保存在当前 Windows 用户的数据目录：
+感谢以下项目和资料：
 
-```text
-%LOCALAPPDATA%\MapleMeter-Warm\
-├── history/                 # 历史记录 XML
-├── daily/                   # 每日统计 XML
-├── font.txt                 # 字体设置
-├── scale.txt                # 缩放设置
-├── theme.txt                # 皮肤设置
-├── region-*.txt             # 手动校准区域（如有）
-├── levels.csv               # 自定义经验表（如有）
-└── error.log                # 异常日志（发生错误时生成）
-```
+- [NiaMeowDB](https://meowdb.com/msclassic/guides/exp-table-level-1-to-100) 与 [MapleClassic Wiki](https://mapleclassic.wiki/index.php?title=Experience&oldid=89094)：Classic World 经验表与交叉核对资料。
+- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)、[Leptonica](https://github.com/DanBloomberg/leptonica)：屏幕文字识别与图像处理。
+- [思源黑体](https://github.com/adobe-fonts/source-han-sans)、[霞鹜文楷](https://github.com/lxgw/LxgwWenKai)、[Inter](https://github.com/rsms/inter)：界面字体。
 
-- 路径由系统根据当前登录用户解析，不绑定开发者用户名或程序解压位置。可从 **设置 → 打开记录目录** 访问。
-- 同一 Windows 用户的多个程序副本共用此数据目录；不同 Windows 用户的记录分别保存。移动或升级程序不会自动清空记录。
-- 记录包含时间、地图、等级、经验、时长和分钟趋势。分享记录或异常日志前，请检查其中的信息；异常日志可能包含你自己的本地路径。
-- 正常使用时，屏幕采样仅用于内存中的识别，不自动保存游戏截图。开发模式 `--render` / `--smoke` 可生成软件界面截图和诊断输出。
-- 发布包不包含开发者的登录凭据、个人游戏截图、历史记录或设置。识别模板仅保留孤立数字及 `EXP`、`LV`、`MINI MAP` 等 HUD 标记。
-- 备份时复制整个数据目录；卸载时删除程序目录即可，若也要清除记录，再自行删除上述数据目录。
+本项目由 **GPT-6-astra** 协助构建，结合使用者的需求与反馈迭代。界面插画与图标由 AI 生成。第三方说明及许可证见 [THIRD-PARTY.txt](THIRD-PARTY.txt) 和 [字体目录](assets/fonts)。
 
-## 常见问题
+## 免责声明
 
-**一直显示“等待游戏”或“等待地图”？**
+本项目是非官方工具，与 MapleStory、Classic World 及其运营方没有隶属或合作关系，相关名称和游戏素材归原权利人所有。
 
-检查窗口选择、小地图是否展开、状态栏是否可见。支持未遮挡的后台窗口；最小化或识别区域被其他窗口遮挡时会停止采样。当前地图识别主要适配英文经典客户端，其他界面布局未保证兼容。
-
-**每小时经验为什么会波动？**
-
-它是近期效率的小时折算值，短时间样本、奖励经验、死亡掉经验、暂停和识别恢复都会影响结果。自动暂停恢复会计入触发恢复的经验变化，但不补计暂停时间，某些场景可能导致效率偏高。
-
-**为什么没有保存到历史？**
-
-有效时长需要超过 10 分钟。更短记录请查看每日统计，并确保正常结束记录或退出。
-
-**换电脑后能直接使用吗？**
-
-符合运行环境时，可完整解压运行包使用，记录会保存在新电脑当前用户的数据目录。无需开发者机器上的目录或账号；如需迁移旧记录，另外复制数据目录。
-
-**打不开或提示缺少 DLL？**
-
-确认下载的是完整运行包、全部文件已经解压、运行库没有被安全软件隔离，并确认系统为 x64 且具备 .NET Framework / WPF。
-
-## 从源码构建
-
-需要 Windows x64、PowerShell 和 .NET Framework 4.x 的 C# 编译器及 WPF 引用。
-
-1. 克隆本仓库。
-2. 下载完整 Release ZIP，将其中的 `MapleMeter-Warm` 文件夹解压到仓库的 `release/` 下，用于提供运行依赖。
-3. 在仓库根目录执行：
-
-```powershell
-.\build.ps1
-```
-
-输出为 `release/MapleMeter-Warm/MapleMeter-Warm.exe`。普通构建不需要重新生成字体；`tools/subset_fonts.py` 仅作为字体制作配方保留，依赖原始字体输入和 fontTools。
-
-核心逻辑自检：
-
-```powershell
-Start-Process .\release\MapleMeter-Warm\MapleMeter-Warm.exe -ArgumentList '--self-test', 'core-results.txt' -Wait
-Get-Content .\core-results.txt
-```
-
-完整发布包使用 `tools/package.ps1` 按明确的文件清单打包，避免误带截图、日志和用户记录。
-
-## 验证范围与限制
-
-已完成编译、核心逻辑回归、迁移至独立中文路径后的随包 OCR 加载与合成数字识别，以及实际 WPF 界面渲染检查。这些验证在开发电脑上完成，**不等同于全新 Windows 电脑或所有游戏版本的兼容性测试**。
-
-截图识别会受遮挡、缩放、字体、客户端布局及画面变化影响。工具展示的是识别和估算结果，缺失区间及估算数据会尽量标记。
-
-## 第三方组件
-
-OCR 使用 Tesseract 与 Leptonica，界面字体基于 Source Han Sans、LXGW WenKai 与 Inter。说明见 [THIRD-PARTY.txt](THIRD-PARTY.txt)，字体许可证位于 [assets/fonts](assets/fonts)。游戏相关视觉素材归相应权利人所有。
-
-本仓库尚未为项目自有代码声明开源许可证；第三方组件仍适用各自许可证。
+识别结果和升级时间仅供参考，可能受画面、版本和暂停状态影响。请自行确认游戏规则是否允许使用此类工具；项目不保证识别准确性、所有电脑的兼容性或账号使用安全。使用前请备份重要记录。
