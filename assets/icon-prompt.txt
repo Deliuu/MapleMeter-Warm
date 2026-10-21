@@ -1,0 +1,4 @@
+MapleMeter Warm icon generated with the built-in image_gen tool.
+Prompt: A bold stylized maple leaf in terracotta orange and golden amber, centered on a warm ivory rounded-square tile, three cream vertical ascending bars cut out at the lower center, legible at small desktop icon sizes, transparent outside tile, no text.
+Generated source: icon.png. ICO packaging: PNG-compressed frames at 16, 24, 32, 48, 64, 128 and 256 pixels.
+The decorative banner is documented separately in banner-prompt.txt.

@@ -1,0 +1,5 @@
+MM Sans UI: subset/static instances derived from Adobe Source Han Sans SC.
+MM Wen UI: subset derived from LXGW WenKai.
+Derived families renamed; originals retain their copyrights and OFL licenses.
+Inter Regular/Medium/Bold: unmodified, complete glyph coverage.
+Build recipe: tools/subset_fonts.py. System font fallback handles out-of-subset CJK.

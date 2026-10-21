@@ -1,0 +1,5 @@
+/release/
+/tests/
+*.zip
+*.log
+/core-results.txt
