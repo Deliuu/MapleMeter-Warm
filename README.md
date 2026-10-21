@@ -6,17 +6,15 @@
 
 **[下载最新版](https://github.com/Deliuu/MapleMeter-Warm/releases/latest)** · Windows x64
 
-> 目前仓库为私有，需要获得访问权限才能下载。其他服或其他客户端暂未保证兼容。
+
 
 ## 看看界面
 
-以下都是软件实际运行的界面，使用演示数据，不是个人游戏记录。
+以下为正常运行时的实际截图。当前未连接游戏，历史暂无记录；点击图片可查看大图。
 
-![主界面](docs/images/main.png)
-
-练级时也可以切换成置顶小窗：
-
-![悬浮窗](docs/images/compact.png)
+| 主界面 | 练级历史 | 外观设置 |
+| :---: | :---: | :---: |
+| <a href="docs/images/main.png"><img src="docs/images/main.png" width="250" alt="实际主界面"></a> | <a href="docs/images/history.png"><img src="docs/images/history.png" width="250" alt="实际练级历史窗口"></a> | <a href="docs/images/settings.png"><img src="docs/images/settings.png" width="220" alt="实际皮肤字体设置"></a> |
 
 ## 能做什么
 
@@ -25,13 +23,6 @@
 - **留记录**：查看历史与最近 7 / 30 天统计，也能导出 CSV。
 - **自动暂停**：15 秒没有游戏前台键鼠操作时暂停，识别到经验变化后恢复；也可以手动控制。
 - **换外观**：内置 **3 套皮肤**——静夜薄荷、枫糖暖光、晴空轻白；**2 套中文字体**——思源黑体、霞鹜文楷。英文和数字使用 Inter，界面大小也能调整。
-
-<details>
-<summary>展开查看皮肤、字体与缩放设置</summary>
-
-![外观设置](docs/images/settings.png)
-
-</details>
 
 ## 怎么用
 
