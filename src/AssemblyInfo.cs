@@ -1,5 +1,5 @@
-﻿[assembly:System.Reflection.AssemblyTitle("MapleMeter 暖光版")]
+[assembly:System.Reflection.AssemblyTitle("MapleMeter 暖光版")]
 [assembly:System.Reflection.AssemblyProduct("MapleMeter 暖光版")]
 [assembly:System.Reflection.AssemblyDescription("屏幕识别经验效率工具 · 暖光版")]
-[assembly:System.Reflection.AssemblyVersion("1.7.0.0")]
-[assembly:System.Reflection.AssemblyFileVersion("1.7.0.0")]
+[assembly:System.Reflection.AssemblyVersion("1.7.1.0")]
+[assembly:System.Reflection.AssemblyFileVersion("1.7.1.0")]

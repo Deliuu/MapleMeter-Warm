@@ -1,0 +1,26 @@
+MapleMeter local build: third-party components
+
+Tesseract OCR 5.4.0 (Apache License 2.0)
+https://github.com/tesseract-ocr/tesseract
+English recognition data:
+https://github.com/tesseract-ocr/tessdata_fast
+Runtime: bundled Windows x64 OCR libraries; no separate Tesseract installation required.
+Distributor: https://github.com/UB-Mannheim/tesseract/wiki
+The installation's own AUTHORS, LICENSE, and README are included in THIRD-PARTY/tesseract.
+
+Leptonica (BSD-style license): https://github.com/DanBloomberg/leptonica
+The local Tesseract Windows distribution also contains native dependency DLLs
+(including GNU runtime libraries, GLib, image codecs, compression and Unicode libraries).
+Their original upstream licenses apply. This is a local-use build assembled from
+the user's existing installation, not a republished upstream distribution.
+
+Recognition templates contain isolated HUD glyphs and labels only.
+MapleStory visuals belong to their respective rights holders. No game files are read.
+
+
+Fonts (SIL Open Font License 1.1):
+MM Sans UI: renamed UI subset/static instances of Adobe Source Han Sans SC.
+MM Wen UI: renamed UI subset of LXGW WenKai.
+Inter Regular/Medium/Bold: unmodified complete font files.
+Original copyright notices and licenses: fonts/OFL-*.txt.
+Subset recipe and provenance: tools/subset_fonts.py, fonts/NOTICE.txt.
